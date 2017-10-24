@@ -1,0 +1,4 @@
+*.crf.ser.gz
+*.jar
+META-INF
+edu

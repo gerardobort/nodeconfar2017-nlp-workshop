@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <title>CoreNLP Workshop Exercise</title>
+  <link href="order.css" media="all" rel="stylesheet" />
+  <script src="order.js"></script>
+  <body onload="initialize()">
+    <h1>Mc King</h1>
+    <label>Hacé tu pedido
+      <textarea id="input-order" onkeyup="processOrder(this.value)"></textarea>
+      <button id="startRecognition">Start</button>
+      <button id="stopRecognition">Stop</button>
+    </label>
+    <div id="canvas"></div>
+    <pre id="debug"></pre>
+  </body>
+</html>

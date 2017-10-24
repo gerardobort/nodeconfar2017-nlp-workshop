@@ -1,0 +1,105 @@
+body {
+  font-weight: 300;
+  font-family: 'Helvetica Neue';
+  background: #fafafa;
+  color: #1c1c1c;
+}
+
+label {
+  font-size: 22px;
+}
+
+textarea {
+  display: block;
+  width: 600px;
+  height: 200px;
+  font-size: 22px;
+  margin: 0 0 50px 0;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+button[disabled] {
+  opacity: 0.4;
+}
+
+.order {
+  border-top: 2px dashed gray;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.order h1 {
+  margin: 80px 0 50px;
+  float: right;
+  overflow: hidden;
+  width: calc( 100% - 650px );
+}
+
+.thing {
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+}
+
+.thing:before,
+.extra-thing:before {
+  content: attr(data-size) ' x ' attr(data-quantity);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  font-size: 20px;
+}
+
+.thing:before {
+  font-size: 40px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.extra-thing.INGREDIENT:before,
+.extra-thing.CONDIMENT:before {
+  content: '';
+}
+.extra-things {
+  float: right;
+  clear: right;
+  overflow: hidden;
+  width: calc( 100% - 650px );
+  border-top: 2px dotted #eee;
+}
+
+.extra-thing {
+  position: relative;
+  float: left;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 0 10px 10px 0;
+}
+
+.extra-thing.ORDER_REMOVE:after {
+  content: 'x';
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: -30px;
+  color: red;
+  font-size: 150px;
+  left: 40px;
+}
