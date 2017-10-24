@@ -35,7 +35,7 @@ cd $WORKSHOPPATH && curl -O https://nlp.stanford.edu/software/stanford-spanish-c
 
 Antes de compilar debemos asegurarnos tener correctamente instalado Ant:
 
-##### 1.2.1. Linux
+##### 1.2.1. Linux (Debian)
 
 ```bash
 sudo apt-get install ant
