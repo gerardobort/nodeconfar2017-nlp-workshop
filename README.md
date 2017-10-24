@@ -4,7 +4,14 @@
 
 ### 1. Cofigurar entorno
 
-Antes de clonar el repo...
+Antes de clonar el repo, tener en cuenta que queremo lograr la siguiente estructura de directorios...
+
+```txt
+|~nlp-workshop/
+| |+CoreNLP/                                           <-- https://github.com/stanfordnlp/CoreNLP
+| |+nodeconfar2017-nlp-workshop/                       <-- este repo 🌝
+| `-stanford-spanish-corenlp-2017-06-09-models.jar     <-- https://nlp.stanford.edu/software/stanford-spanish-corenlp-2017-06-09-models.jar
+```
 
 #### 1.2. Variables de entorno para facilitar todo
 
