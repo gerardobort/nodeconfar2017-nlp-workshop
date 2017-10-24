@@ -24,8 +24,6 @@ export CLASSPATH="$CORENLPPATH/*" # <-- esta variable es la que JRE usa para bus
 ```bash
 # Clonate el repo original de CoreNLP
 git clone https://github.com/stanfordnlp/CoreNLP.git $CORENLPPATH
-# Compilar CoreNLP (hay que instalar primero `ant` - `brew install ant`)
-ant jar
 
 # descargate el modelo de Español y guardalo dentro de la carpeta del workshop
 cd $WORKSHOPPATH && curl -O https://nlp.stanford.edu/software/stanford-spanish-corenlp-2017-06-09-models.jar
