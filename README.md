@@ -58,24 +58,24 @@ Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguient
 
 #### 2.1. Ejemplo muy sencillo
 
-```
-# Texto
-Yo quiero un sánguche
-```
+> Yo quiero un sánguche
 
 #### 2.2. Otro ejemplo
-```
-# Texto
-Yo quiero un sánguche de jamón y queso.
-Carlos pide un omelette con huevo.
-Para mi vieja preparame un caldo con pollo.
 
+> Yo quiero un sánguche de jamón y queso.
+> Carlos pide un omelette con huevo.
+> Para mi vieja preparame un caldo con pollo.
+
+```
 # Semgrex
 ({pos:/vmip000/}=intent >/nsubj|iobj/ {pos:/(np|pp|nc0s)\d+/}=who >dobj ({pos:/.*/}=thing >nmod {pos:/nc.*/}=ingredient))
 ```
 
 #### 2.3. Ejemplo Alejo
-```
-# Texto
-La quiero con mayonesa, sin kétchup y con mostaza. Dejale el tomate, pero sacale la lechuga y la carne. Dejale el oregano, pero reemplazame la cebolla por la gaseosa.  Y agrandame las papas y cambiámelas por un cono de vainilla.  Y si no tenés de vainilla ponele kétchup a la comida y agrandame el menú por 50 centavos.  Pero no le pongas condimentos al helado porque vengo del cine y ella se llama Valentina.
-```
+
+> La quiero con mayonesa, sin kétchup y con mostaza.
+> Dejale el tomate, pero sacale la lechuga y la carne.
+> Dejale el oregano, pero reemplazame la cebolla por la gaseosa.
+> Y agrandame las papas y cambiámelas por un cono de vainilla.
+> Y si no tenés de vainilla ponele kétchup a la comida y agrandame el menú por 50 centavos.
+> Pero no le pongas condimentos al helado porque vengo del cine y ella se llama Valentina.
