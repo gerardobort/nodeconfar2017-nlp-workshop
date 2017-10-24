@@ -2,9 +2,9 @@
 
 ## 1. Configuración de RegexNER
 
-En `$WORKSHOPMODELPATH/mcking-regexner.tsv` tenemos un ejemplo de configuración `.tsv` de dos columnas con expresiones regulares y sus etiquedas.
+En `$PROTOTYPEMODELPATH/mcking-regexner.tsv` tenemos un ejemplo de configuración `.tsv` de dos columnas con expresiones regulares y sus etiquedas.
 
-Al ejecutar el Pipeline de CoreNLP con dicho modelo, el parser etiquetará las entidades en base a las expresiones (ver `$WORKSHOPMODELPATH/StanfordCoreNLP-spanish.properties` para saber cómo configurarlo).
+Al ejecutar el Pipeline de CoreNLP con dicho modelo, el parser etiquetará las entidades en base a las expresiones (ver `$PROTOTYPEMODELPATH/StanfordCoreNLP-spanish.properties` para saber cómo configurarlo).
 
 ## 2. Entrenamiento del NERClassifierCombiner en CoreNLP
 
@@ -60,7 +60,7 @@ Una vez en Vim...
 
 java edu.stanford.nlp.ie.crf.CRFClassifier -prop ner-train.prop
 
-## se generará un archivo en `$WORKSHOPMODELPATH/mcking-ner.crf.ser.gz` (ver ner-train.prop settings)
+## se generará un archivo en `$PROTOTYPEMODELPATH/mcking-ner.crf.ser.gz` (ver ner-train.prop settings)
 ```
 
 #### 2.4.1. Anexo: Resultados de entrenamiento
@@ -105,7 +105,7 @@ CRFClassifier tagged 509 words in 51 documents at 8079.37 words per second.
 ### 2.5. Probar el modelo entrenado, luego de haber sido entrenado (opcional)
 
 ```bash
-java edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier $WORKSHOPMODELPATH/mcking-ner.crf.ser.gz -testFile testset.tsv
+java edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier $PROTOTYPEMODELPATH/mcking-ner.crf.ser.gz -testFile testset.tsv
 ```
 
 ## 3. Combinar nuestro modelo con el Spanish default de CoreNLP
@@ -114,10 +114,10 @@ En este paso haremos un "merge" del modelo `stanford-spanish-corenlp-2017-06-09-
 
 Recordemos que el modelo estándar además de RegexNER y NER también agrega POS Tagger, Constituency Parser, Dependency Parser, etc.
 
-Lo que haremos es extraer los archivos del `.jar` (como si fuera un `.zip`) y los colocaremos dentro de `$WORKSHOPMODELPATH/`.  Cuando nos pregunte si deseamos sobreescribir `StanfordCoreNLP-spanish.properties` *DIREMOS QUE NOO*.
+Lo que haremos es extraer los archivos del `.jar` (como si fuera un `.zip`) y los colocaremos dentro de `$PROTOTYPEMODELPATH/`.  Cuando nos pregunte si deseamos sobreescribir `StanfordCoreNLP-spanish.properties` *DIREMOS QUE NOO*.
 
 ```
-unzip $CORENLPPATH/stanford-spanish-corenlp-2017-06-09-models.jar -d $WORKSHOPMODELPATH
+unzip $CORENLPPATH/stanford-spanish-corenlp-2017-06-09-models.jar -d $PROTOTYPEMODELPATH
 ```
 
 Nota: para el proyecto ya hemos tomado los recaudos de excluir estos archivos en `.gitignore`.
@@ -125,7 +125,7 @@ Nota: para el proyecto ya hemos tomado los recaudos de excluir estos archivos en
 ## 4. Correr CoreNLP con el nuevo modelo
 
 ```bash
-cd $WORKSHOPMODELPATH
+cd $PROTOTYPEMODELPATH
 java -Xmx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer
 ```
 
