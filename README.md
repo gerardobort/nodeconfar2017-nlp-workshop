@@ -100,3 +100,9 @@ Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguient
 > Y agrandame las papas y cambiámelas por un cono de vainilla.
 > Y si no tenés de vainilla ponele kétchup a la comida y agrandame el menú por 50 centavos.
 > Pero no le pongas condimentos al helado porque vengo del cine y ella se llama Valentina.
+
+
+
+
+docker build corenlp -f corenlp/Dockerfile
+docker run -p 9000:9000 3e23c1e76267
