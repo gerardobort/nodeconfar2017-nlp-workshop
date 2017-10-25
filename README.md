@@ -63,19 +63,21 @@ brew install ant coreutils
 
 #### 1.5. Compilá CoreNLP
 
+#### 2. Compilá 
+
 ```bash
 cd $CORENLPPATH && ant jar
 ```
 
-### 2. Hagamos algunas pruebas
+### 3. Hagamos algunas pruebas
 
 Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguientes ejemplos:
 
-#### 2.1. Ejemplo muy sencillo
+#### 3.1. Ejemplo Valentina
 
-> Yo quiero un sánguche
+> Yo quiero un sánguche.
 
-#### 2.2. Otro ejemplo
+#### 3.2. Otro ejemplo
 
 > Yo quiero un sánguche de jamón y queso.
 > Carlos pide un omelette con huevo.
@@ -86,7 +88,11 @@ Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguient
 ({pos:/vmip000/}=intent >/nsubj|iobj/ {pos:/(np|pp|nc0s)\d+/}=who >dobj ({pos:/.*/}=thing >nmod {pos:/nc.*/}=ingredient))
 ```
 
-#### 2.3. Ejemplo Alejo
+#### 3.3. Ejemplo Carlitox
+
+> Hola dame una hamburguesa con gaseosa mediana y sin papas.
+
+#### 3.4. Ejemplo Alejo
 
 > La quiero con mayonesa, sin kétchup y con mostaza.
 > Dejale el tomate, pero sacale la lechuga y la carne.
