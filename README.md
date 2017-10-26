@@ -31,15 +31,15 @@ export CLASSPATH="*:$CORENLPPATH/*" # <-- esta variable es la que JRE usa para b
 Debería quedar algo así...
 
 ```txt
-.														<-- $WORKSHOPPATH
-├── nodeconfar2017-nlp-workshop							<-- $PROTOTYPEPATH
+.                                                       <-- $WORKSHOPPATH
+├── nodeconfar2017-nlp-workshop                         <-- $PROTOTYPEPATH
 │   ├── README.md
 │   ├── corenlp
 │   ├── node_modules
 │   ├── package-lock.json
 │   ├── package.json
 │   └── src
-├── CoreNLP												<-- $CORENLPPATH
+├── CoreNLP                                             <-- $CORENLPPATH
 │   ├── CONTRIBUTING.md
 │   ├── JavaNLP-core.eml
 │   ├── JavaNLP-core.iml
@@ -55,7 +55,7 @@ Debería quedar algo así...
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── itest
-│   ├── javanlp-core.jar								<-- este jar es el resultado de compilar con `ant jar`
+│   ├── javanlp-core.jar                                <-- este jar es el resultado de compilar con `ant jar`
 │   ├── lib
 │   ├── liblocal
 │   ├── libsrc
@@ -65,7 +65,7 @@ Debería quedar algo así...
 │   ├── scripts
 │   ├── src
 │   └── test
-└── stanford-spanish-corenlp-2017-06-09-models.jar		<-- modelo Spanish por defecto
+└── stanford-spanish-corenlp-2017-06-09-models.jar      <-- modelo Spanish por defecto
 ```
 
 #### 1.2. Cloná este repo (el prototipo)
