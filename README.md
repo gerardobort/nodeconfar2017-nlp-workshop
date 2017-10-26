@@ -32,6 +32,7 @@ export CLASSPATH="$CORENLPPATH/*" # <-- esta variable es la que JRE usa para bus
 
 ```bash
 git clone https://github.com/gerardobort/nodeconfar2017-nlp-workshop $PROTOTYPEPATH
+cd $PROTOTYPEPATH && npm install
 ```
 
 #### 1.3. Descargá CoreNLP
@@ -103,6 +104,14 @@ Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguient
 
 
 
+## 2. Anexo: Docker
 
+```bash
+# build docker image
 docker build corenlp -f corenlp/Dockerfile
+
+# replace hash with created image
 docker run -p 9000:9000 3e23c1e76267
+
+# pending... mount volume
+```
