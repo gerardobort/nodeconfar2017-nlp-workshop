@@ -80,7 +80,7 @@ cp $PROTOTYPEPATH/corenlp/justincase/java-corenlp.jar $CORENLPPATH/
 ```bash
 # Al ejecutarlo desde la carpeta raíz del workshop, levanta el modelo spanish.... más adelante lo ejecutaremos desde nuestra carpeta src/model, para usar nuestros propios modelos.
 cd $WORKSHOPPATH
-java -Xmx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer
+java -cp "*:CoreNLP/*" -Xmx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer
 ```
 
 ## 3. Hagamos algunas pruebas
