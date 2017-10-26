@@ -7,17 +7,39 @@
 Antes de clonar el repo, tener en cuenta que queremos lograr la siguiente estructura de directorios... por eso antes ue nada hay que crear la carpeta de trabajo a la que vamos a apuntar luego con una variable de entorno `$WORKSHOPPATH`.
 
 ```txt
-|~nlp-workshop/
-| |+nodeconfar2017-nlp-workshop/                       <-- este repo 🌝
-| |+CoreNLP/                                           <-- https://github.com/stanfordnlp/CoreNLP
-| `-stanford-spanish-corenlp-2017-06-09-models.jar     <-- https://nlp.stanford.edu/software/stanford-spanish-corenlp-2017-06-09-models.jar
+nlp-workshop/
+	├── nodeconfar2017-nlp-workshop/                      <-- este repo 🌝
+	├── CoreNLP/                                          <-- https://github.com/stanfordnlp/CoreNLP
+	└── stanford-spanish-corenlp-2017-06-09-models.jar    <-- https://nlp.stanford.edu/software/stanford-spanish-corenlp-2017-06-09-models.jar
+```
+
+#### 1.1. Variables de entorno para facilitar todo
+
+```bash
+# Incluí lo que sigue en tu .bashrc (Linux) o .bash_profile (OSX)
+# El path tiene que ser absoluto sino más adelante se rompe todo (modificar el path $CORENLPPATH a gusto)
+
+export WORKSHOPPATH="$HOME/nlp-workshop"  ## <-- modificar a gusto, solo ésta variable
+export PROTOTYPEPATH="$WORKSHOPPATH/nodeconfar2017-nlp-workshop"
+export PROTOTYPEMODELPATH="$PROTOTYPEPATH/src/model"
+export CORENLPPATH="$WORKSHOPPATH/CoreNLP"
+export CLASSPATH="*:$CORENLPPATH/*" # <-- esta variable es la que JRE usa para buscar los '.jar' ó CoreNLP los modelos, además del "current path"
+
+# ...darle `source` al bash profile para cargar dichas variables de entorno
 ```
 
 Debería quedar algo así...
 
 ```txt
-.
-├── CoreNLP
+.														<-- $WORKSHOPPATH
+├── nodeconfar2017-nlp-workshop							<-- $PROTOTYPEPATH
+│   ├── README.md
+│   ├── corenlp
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src
+├── CoreNLP												<-- $CORENLPPATH
 │   ├── CONTRIBUTING.md
 │   ├── JavaNLP-core.eml
 │   ├── JavaNLP-core.iml
@@ -33,7 +55,7 @@ Debería quedar algo así...
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── itest
-│   ├── javanlp-core.jar
+│   ├── javanlp-core.jar								<-- este jar es el resultado de compilar con `ant jar`
 │   ├── lib
 │   ├── liblocal
 │   ├── libsrc
@@ -43,35 +65,7 @@ Debería quedar algo así...
 │   ├── scripts
 │   ├── src
 │   └── test
-├── nlp-node-workshop
-│   ├── README.md
-│   ├── node_modules
-│   ├── package-lock.json
-│   ├── package.json
-│   └── src
-├── nodeconfar2017-nlp-workshop
-│   ├── README.md
-│   ├── corenlp
-│   ├── node_modules
-│   ├── package-lock.json
-│   ├── package.json
-│   └── src
-└── stanford-spanish-corenlp-2017-06-09-models.jar
-```
-
-#### 1.2. Variables de entorno para facilitar todo
-
-```bash
-# Incluí lo que sigue en tu .bashrc (Linux) o .bash_profile (OSX)
-# El path tiene que ser absoluto sino más adelante se rompe todo (modificar el path $CORENLPPATH a gusto)
-
-export WORKSHOPPATH="$HOME/nlp-workshop"  ## <-- modificar a gusto, solo ésta variable
-export PROTOTYPEPATH="$WORKSHOPPATH/nodeconfar2017-nlp-workshop"
-export PROTOTYPEMODELPATH="$PROTOTYPEPATH/src/model"
-export CORENLPPATH="$WORKSHOPPATH/CoreNLP"
-export CLASSPATH="$CORENLPPATH/*" # <-- esta variable es la que JRE usa para buscar los '.jar' ó CoreNLP los modelos, además del "current path"
-
-# ...darle `source` al bash profile para cargar dichas variables de entorno
+└── stanford-spanish-corenlp-2017-06-09-models.jar		<-- modelo Spanish por defecto
 ```
 
 #### 1.2. Cloná este repo (el prototipo)
@@ -137,7 +131,7 @@ Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguient
 
 > Yo quiero un sánguche.
 
-#### 3.2. Otro ejemplo
+#### 3.2. Un ejemplo con Semgrex
 
 > Yo quiero un sánguche de jamón y queso.
 > Carlos pide un omelette con huevo.
