@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 const publicRouter = require('./public');
 const apiImageRouter = require('./api/image');
@@ -16,4 +16,6 @@ app.use(apiOrderRouter);
 
 app.listen(PORT, function () {
   console.log(`Sample app listening on port ${PORT}!`);
+  console.log(`  --> http://localhost:${PORT}/`);
+  console.log(`  --> http://localhost:${PORT}/tree`);
 });
