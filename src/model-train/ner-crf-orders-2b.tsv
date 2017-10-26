@@ -570,36 +570,3 @@ de	ORDER
 una	O
 hamburguesa	O
 .	O
-
-Voy	ORDER
-a	ORDER
-pedir	ORDER
-te	ORDER
-dos	O
-pizzas	O
-con	ORDER_ADD
-papas	O
-,	O
-una	ORDER_ADD
-gaseosa	O
-.	O
-
-Quiero	ORDER
-20	O
-pizzas	O
-de	ORDER_ADD
-muzzarella	O
-con	ORDER_ADD
-papas	O
-y	ORDER_ADD
-gaseosa	O
-.	O
-
-Quiero	ORDER
-una	O
-pizza	O
-de	ORDER_ADD
-muzzarella	O
-y	ORDER_ADD
-tomate	O
-.	O

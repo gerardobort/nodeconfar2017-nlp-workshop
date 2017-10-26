@@ -7,7 +7,6 @@ pepinos?	INGREDIENT
 aceitunas?	INGREDIENT
 gaseosas?	DRINK
 pepsi	DRINK
-acelga	INGREDIENT
 picklet?s	INGREDIENT
 aceto	CONDIMENT
 hamburguesas?	MEAL
@@ -15,15 +14,11 @@ pimientos?	INGREDIENT
 aj(i|í)(es)?	INGREDIENT
 helados?	DESSERT
 jalape(ñ|n)o	INGREDIENT
-pizzas?	MEAL
 ajo	INGREDIENT
 jam(o|ó)n(es)?	INGREDIENT
 pollos?	INGREDIENT
-albahaca	INGREDIENT
 portobells?o	INGREDIENT
-apios?	INGREDIENT
 k(e|é)tchup	CONDIMENT
-provolone	INGREDIENT
 at(u|ú)n	INGREDIENT
 queso az(u|ú)l	INGREDIENT
 atún(es)?	INGREDIENT
@@ -33,7 +28,6 @@ barbacoa	CONDIMENT
 lim(o|ó)n	INGREDIENT
 rojas?	DRINK
 birras?	DRINK
-roquefort	INGREDIENT
 brownie	DESSERT
 mayo(nesa)?	CONDIMENT
 rubia	DRINK
@@ -47,7 +41,6 @@ sal	CONDIMENT
 cheddar	INGREDIENT
 morr(o|ó)n(es)?	INGREDIENT
 sandwit?ch	MEAL
-choclo	INGREDIENT
 sanguche	MEAL
 chori(zo)?s?	MEAL
 mostazas?	CONDIMENT
@@ -61,7 +54,6 @@ or(e|é)ganos?	CONDIMENT
 toma(tes?)?	INGREDIENT
 toma tes?	INGREDIENT
 cocas?	DRINK
-empanadas?	MEAL
 palmitos?	INGREDIENT
 t(o|ó)nicas?	DRINK
 paltas?	INGREDIENT
@@ -91,8 +83,3 @@ vainilla	DESSERT
 dulce de leche	DESSERT
 chocolate	DESSERT
 verduras?	INGREDIENT
-chi(ca|co|quito|quita)s?	SIZE
-pequeñ(a|o|ito|ita)s?	SIZE
-median(a|o|nito|nita|nota|ne)s?	SIZE
-grand(e|dote|dota)s?	SIZE
-gigant(e|tote|tota)s?	SIZE
