@@ -63,13 +63,27 @@ brew install ant coreutils
 
 #### 1.5. Compilá CoreNLP
 
-#### 2. Compilá 
-
 ```bash
 cd $CORENLPPATH && ant jar
 ```
 
-### 3. Hagamos algunas pruebas
+#### 1.5.1 En caso de no poder compilar CoreNLP...
+
+Cualquiera fuese el motivo de no poder compilar CoreNLP -a modo de salvavidas-, dentro de este repositorio podés encontrar el `.jar` precompilado.  Para que funcione todo, tenés que copiarlo a la raíz del repo de CoreNLP.
+
+```bash
+cp $PROTOTYPEPATH/corenlp/justincase/java-corenlp.jar $CORENLPPATH/
+```
+
+## 2. Corré CoreNLP
+
+```bash
+# Al ejecutarlo desde la carpeta raíz del workshop, levanta el modelo spanish.... más adelante lo ejecutaremos desde nuestra carpeta src/model, para usar nuestros propios modelos.
+cd $WORKSHOPPATH
+java -Xmx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer
+```
+
+## 3. Hagamos algunas pruebas
 
 Abrir [la consola web de CoreNLP](http://localhost:9000/), y probar los siguientes ejemplos:
 
