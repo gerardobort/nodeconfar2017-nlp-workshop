@@ -13,6 +13,52 @@ Antes de clonar el repo, tener en cuenta que queremos lograr la siguiente estruc
 | `-stanford-spanish-corenlp-2017-06-09-models.jar     <-- https://nlp.stanford.edu/software/stanford-spanish-corenlp-2017-06-09-models.jar
 ```
 
+Debería quedar algo así...
+
+```txt
+.
+├── CoreNLP
+│   ├── CONTRIBUTING.md
+│   ├── JavaNLP-core.eml
+│   ├── JavaNLP-core.iml
+│   ├── LICENSE.txt
+│   ├── README.md
+│   ├── build.gradle
+│   ├── build.xml
+│   ├── classes
+│   ├── commonbuildjsp.xml
+│   ├── data
+│   ├── doc
+│   ├── gradle
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── itest
+│   ├── javanlp-core.jar
+│   ├── lib
+│   ├── liblocal
+│   ├── libsrc
+│   ├── licenses
+│   ├── module_core.xml
+│   ├── pom.xml
+│   ├── scripts
+│   ├── src
+│   └── test
+├── nlp-node-workshop
+│   ├── README.md
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src
+├── nodeconfar2017-nlp-workshop
+│   ├── README.md
+│   ├── corenlp
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src
+└── stanford-spanish-corenlp-2017-06-09-models.jar
+```
+
 #### 1.2. Variables de entorno para facilitar todo
 
 ```bash
