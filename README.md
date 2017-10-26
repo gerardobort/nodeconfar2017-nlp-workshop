@@ -67,9 +67,9 @@ brew install ant coreutils
 cd $CORENLPPATH && ant jar
 ```
 
-#### 1.5.1 En caso de no poder compilar CoreNLP...
+##### 1.5.1 En caso de no poder compilar CoreNLP...
 
-Cualquiera fuese el motivo de no poder compilar CoreNLP -a modo de salvavidas-, dentro de este repositorio podés encontrar el `.jar` precompilado.  Para que funcione todo, tenés que copiarlo a la raíz del repo de CoreNLP.
+Cualquiera fuese el motivo de no poder compilar CoreNLP -a modo de salvavidas-, dentro de este repositorio podés encontrar el `.jar` precompilado.  Para que funcione todo, solo tenés que copiarlo a la raíz del repo de CoreNLP.
 
 ```bash
 cp $PROTOTYPEPATH/corenlp/justincase/java-corenlp.jar $CORENLPPATH/
